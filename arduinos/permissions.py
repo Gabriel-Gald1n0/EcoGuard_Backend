@@ -7,6 +7,7 @@ class IsArduinoOwner(BasePermission):
     def has_object_permission(self, request, view, obj: Arduino):
         return request.user == obj.user
 
+
 class ReadOnly(BasePermission):
     def has_permission(self, request, view):
         return request.method in SAFE_METHODS

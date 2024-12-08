@@ -5,7 +5,6 @@ class RegionSerializer(ModelSerializer):
     class Meta:
         model=Region
         fields="__all__"
-        extra_kwargs={
-            "user": {"read_only": True}
-        }
+        ref_name = 'RegionSerializer'
+        
         

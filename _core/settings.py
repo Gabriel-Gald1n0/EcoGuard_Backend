@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 #refatorar o instaledapps 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
-     'corsheaders',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -53,8 +53,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-     'corsheaders.middleware.CorsMiddleware',  # Deve estar no topo
-    'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -63,19 +62,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
-
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Para desenvolvimento local
-]
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "PUT",
-    "DELETE",
-]
-
 
 ROOT_URLCONF = '_core.urls'
 
@@ -188,3 +174,27 @@ SIMPLE_JWT = {
 
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',)
 }
+
+CORS_ALLOW_ALL_ORIGINS = True 
+
+"""
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # URL do seu frontend (exemplo)
+    'http://127.0.0.1:8000/',    # URL de produção (exemplo)
+]
+"""
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'accept',
+    'x-csrftoken',
+]

@@ -1,5 +1,4 @@
 from django.db import models
-from users.models import User
 from regions.models import Region    
 
 class Report(models.Model):
@@ -9,7 +8,4 @@ class Report(models.Model):
         Region, 
         on_delete=models.CASCADE
     )
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE
-    )
+    

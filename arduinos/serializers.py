@@ -5,7 +5,6 @@ class ArduinoSerializer(ModelSerializer):
     class Meta:
         model=Arduino
         fields="__all__"
-        extra_kwargs={
-            "user": {"read_only": True}
-        }
+        ref_name = 'ArduinoSerializer'
+        
         

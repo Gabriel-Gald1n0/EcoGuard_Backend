@@ -1,18 +1,14 @@
 from django.db import models
-from users.models import User
 
 class Custom_Type(models.Model):
-    types_choice = [
-        ("Type 1", "Type 1"),
-        ("Type 2", "Type 2"),
-        ("Type 3", "Type 3")
+    TYPES_CHOICES = [
+        ("Water", "Water"),
+        ("Soil", "Soil"),
+        ("Air", "Air"),
     ]
-    id=models.BigAutoField(primary_key=True)
-    name=models.CharField(max_length=55, choices=types_choice)
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE
-    )
-
-
     
+    id = models.BigAutoField(primary_key=True)
+    type = models.CharField(max_length=55, choices=TYPES_CHOICES, default="Water")
+    
+    def __str__(self):
+        return self.get_type_display()

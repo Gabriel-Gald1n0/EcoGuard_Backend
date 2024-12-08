@@ -42,6 +42,9 @@ urlpatterns = [
     path('api/', include("reports.urls")),
     path('api/', include("custom_types.urls")),
     path('api/', include("data_detections.urls")),
+    path('api/soil/', include('soil_datas.urls')),
+    path('api/water/', include('water_datas.urls')),
+    path('api/air/', include('air_datas.urls')),
 
      # Adicione o endpoint do Swagger
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
