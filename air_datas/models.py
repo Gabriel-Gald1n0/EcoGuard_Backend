@@ -6,7 +6,7 @@ class Air_Data(models.Model):
     gas_level=models.FloatField()
     temperature=models.FloatField()
     air_humidity=models.FloatField()
-    data_detection=models.OneToOneField(
+    data_detection=models.ForeignKey(
         Data_Detection,
         on_delete=models.CASCADE
     )
