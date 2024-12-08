@@ -198,3 +198,11 @@ CORS_ALLOW_HEADERS = [
     'accept',
     'x-csrftoken',
 ]
+
+# Configurações do Swagger
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': None,  # Remove a autenticação do Swagger
+    'USE_SESSION_AUTH': False,    # Evita redirecionamento para a página de login
+    'LOGIN_URL': None,            # Desativa o login padrão do Django
+    'LOGOUT_URL': None,           # Desativa o logout padrão do Django
+}
