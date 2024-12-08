@@ -21,7 +21,7 @@ Certifique-se de que os arquivos do projeto estão no seu computador.
 
 ---
 
-### 2. Configure um Ambiente Virtual
+### 2. Configure um Ambiente Virtual (PROVAVELMENTE JA ESTA CRIADO)
 
 Crie um ambiente virtual para evitar conflitos de dependências.
 
@@ -69,6 +69,10 @@ Se necessário, configure suas credenciais no arquivo `.env` ou diretamente no a
 Execute as migrações para configurar as tabelas no banco de dados:
 
 ```bash
+python manage.py makemigrations
+```
+
+```bash
 python manage.py migrate
 ```
 
@@ -95,6 +99,13 @@ python manage.py runserver
 O servidor estará disponível no navegador em:
 [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+Utilizamos o Swagger para mexer na API.
+Para Utilizar o swagger basta colocar /swagger/ em frente a rota.
+Exemplo:
+
+```bash
+http://127.0.0.1:8000/swagger/
+```
 ---
 
 ## Resolvendo Problemas
