@@ -99,7 +99,7 @@ python manage.py runserver
 O servidor estará disponível no navegador em:
 [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-Utilizamos o Swagger para mexer na API.
+Utilizamos o Swagger para usar os Endpoints da API.
 
 Para Utilizar o swagger basta colocar /swagger/ em frente a rota.
 
