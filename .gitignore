@@ -1,6 +1,7 @@
 # Ambiente Virtual
 venv/
 env
+staticfiles/
 
 # PyCharm
 .idea/
