@@ -1,7 +1,6 @@
 # Ambiente Virtual
-venv
+venv/
 env
-.env
 
 # PyCharm
 .idea/
